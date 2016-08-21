@@ -29,4 +29,14 @@ fun! s:findFunction()
   endif
 endfun
 
-inoremap <buffer> <expr> <C-Y> <sid>findFunction()
+if maparg("\<c-y>", 'i') == ''
+  inoremap <buffer> <expr> <C-Y> <sid>findFunction()
+endif
+
+if maparg(']]','n') == ''
+  nnoremap <silent><buffer> [[ m':call search('^\l[0-9A-Za-z'']*\s*::', "bW")<CR>
+  nnoremap <silent><buffer> ]] m':call search('^\l[0-9A-Za-z'']*\s*::', "W")<CR>
+
+  vnoremap <silent><buffer> [[ m':<C-U>exe "normal! gv"<Bar>call search('^\l[0-9A-Za-z'']*\s*::', "bW")<CR>
+  vnoremap <silent><buffer> ]] m':<C-U>exe "normal! gv"<Bar>call search('^\l[0-9A-Za-z'']*\s*::', "W")<CR>
+endif
