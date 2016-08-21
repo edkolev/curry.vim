@@ -16,9 +16,7 @@ Helpers for writing Haskell in Vim, without *any* dependencies.
 
 * Pressing `<control-y>` in insert mode will add the function name defined above. Pressing it again will insert `= undefined`
 
-![screen shot 2016-08-21 at 20 04 31](https://cloud.githubusercontent.com/assets/1532071/17838625/8cbe2240-67da-11e6-8a27-441be8dcfb54.png)
-![screen shot 2016-08-21 at 20 04 35](https://cloud.githubusercontent.com/assets/1532071/17838627/8cbe8a82-67da-11e6-8a53-6bfa79fa02eb.png)
-![screen shot 2016-08-21 at 20 04 40](https://cloud.githubusercontent.com/assets/1532071/17838626/8cbe896a-67da-11e6-858e-8b667c78ab13.png)
+![9](https://cloud.githubusercontent.com/assets/1532071/17838793/2277f84e-67de-11e6-86b2-a90649ef926e.gif)
 
 ### Installation
 
