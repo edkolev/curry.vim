@@ -19,7 +19,8 @@ fun! s:findFunction()
   if empty(cline)
     return funcname
   elseif cline =~ '^' . funcname . '\s*$'
-    return ' = undefined'
+    let pre = cline =~ '\s\+$' ? '' : ' '
+    return pre . '= undefined'
   elseif cline =~ '^' . funcname . '\s*=\s*$'
     return 'undefined'
   elseif strpart(funcname, 0, len(cline)) == cline
